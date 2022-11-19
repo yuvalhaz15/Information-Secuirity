@@ -28,9 +28,11 @@ public class Main {
         String fileString = readString("src/myKey.txt");
 //        System.out.println(fileString);
 
-        String checkChiper = CipherBlockChaining.encrypt("ABCDQRSTA", "0000000000", fileString);
-        System.out.println(checkChiper);
+        String checkChiper1 = CipherBlockChaining.encrypt("ABCDQRSTAB", "0000000000", fileString);
+        System.out.println(checkChiper1);
 //
+        String checkPlainText=  CipherBlockChaining.decrypt(checkChiper1, "0000000000", fileString);
+        System.out.println(checkPlainText);
 //        HashMap<Character, Character> keyDictonary = new HashMap<Character, Character>();
 //        for (char ch = 'a'; ch <= 'z'; ++ch)
 //            keyDictonary.put(ch, ch);
